@@ -10,6 +10,6 @@ variable "name" {
   type    = string
 }
 
-variable "perfix" {
+variable "prefix" {
   type = string
 }
