@@ -9,3 +9,7 @@ output "s3_name" {
 output "vpc_name" {
   value = format("${var.prefix}-vpc-%s", join("-", compact([var.name, var.environment, var.region_shortname])))
 }
+
+output "snet_name" {
+  value = format("${var.prefix}-snet-%s", join("-", compact([var.name, var.environment, var.region_shortname])))
+}
