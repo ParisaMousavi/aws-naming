@@ -13,3 +13,7 @@ output "vpc_name" {
 output "snet_name" {
   value = format("${var.prefix}-snet-%s", join("-", compact([var.name, var.environment, var.region_shortname])))
 }
+
+output "ec2_name" {
+  value = format("${var.prefix}-ec2-%s", join("-", compact([var.name, var.environment, var.region_shortname])))
+}
