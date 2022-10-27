@@ -17,3 +17,7 @@ output "snet_name" {
 output "ec2_name" {
   value = format("${var.prefix}-ec2-%s", join("-", compact([var.name, var.environment, var.region_shortname])))
 }
+
+output "eks_name" {
+  value = format("${var.prefix}-eks-%s", join("-", compact([var.name, var.environment, var.region_shortname])))
+}
