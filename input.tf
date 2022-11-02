@@ -1,13 +1,13 @@
 variable "environment" {
-  type    = string
+  type = string
 }
 
 variable "region_shortname" {
-  type    = string
+  type = string
 }
 
 variable "name" {
-  type    = string
+  type = string
 }
 
 variable "prefix" {
