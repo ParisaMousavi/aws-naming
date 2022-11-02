@@ -21,3 +21,7 @@ output "ec2_name" {
 output "eks_name" {
   value = format("${var.prefix}-eks-%s", join("-", compact([lower(var.name), lower(var.environment), lower(var.region_shortname)])))
 }
+
+output "group_name" {
+  value = format("${var.prefix}-grp-%s", join("-", compact([lower(var.name), lower(var.environment), lower(var.region_shortname)])))
+}
