@@ -15,5 +15,6 @@ variable "prefix" {
 }
 
 variable "purpose" {
-  type = string
+  type    = string
+  default = null
 }
