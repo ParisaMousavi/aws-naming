@@ -13,3 +13,7 @@ variable "name" {
 variable "prefix" {
   type = string
 }
+
+variable "purpose" {
+  type = string
+}
