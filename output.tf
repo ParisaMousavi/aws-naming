@@ -26,8 +26,8 @@ output "group_name" {
   value = format("${var.prefix}-grp-%s", join("-", compact([lower(var.name), lower(var.environment), lower(var.region_shortname)])))
 }
 
-output "policy_name" {
-  value = format("${var.prefix}-plc-%s", join("-", compact([lower(var.name), lower(var.environment), lower(var.region_shortname)])))
+output "policy" {
+  value = format("${var.prefix}-plc-%s", join("-", compact([lower(var.name), var.purpose, lower(var.environment), lower(var.region_shortname)])))
 }
 
 output "arc" {
@@ -36,14 +36,18 @@ output "arc" {
 
 output "arc_custom_location" {
   description = "Arc custom location. It's used only intern for Arc."
-  value = format("${var.prefix}-%s", join("-", compact([var.purpose, lower(var.name), lower(var.environment), lower(var.region_shortname)])))
+  value       = format("${var.prefix}-%s", join("-", compact([var.purpose, lower(var.name), lower(var.environment), lower(var.region_shortname)])))
 }
 
 output "arc_dc_extension" {
   description = "Arc data controller extension. It's used only intern for Arc."
-  value = format("${var.prefix}-%s", join("-", compact([var.purpose, lower(var.name), lower(var.environment), lower(var.region_shortname)])))
+  value       = format("${var.prefix}-%s", join("-", compact([var.purpose, lower(var.name), lower(var.environment), lower(var.region_shortname)])))
 }
 
 output "api_gtw" {
-  value = format("${var.prefix}-gtw-%s", join("-", compact([lower(var.name),var.purpose, lower(var.environment), lower(var.region_shortname)])))
+  value = format("${var.prefix}-gtw-%s", join("-", compact([lower(var.name), var.purpose, lower(var.environment), lower(var.region_shortname)])))
+}
+
+output "lambda" {
+  value = format("${var.prefix}-lmb-%s", join("-", compact([lower(var.name), var.purpose, lower(var.environment), lower(var.region_shortname)])))
 }
