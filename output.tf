@@ -43,3 +43,7 @@ output "arc_dc_extension" {
   description = "Arc data controller extension. It's used only intern for Arc."
   value = format("${var.prefix}-%s", join("-", compact([var.purpose, lower(var.name), lower(var.environment), lower(var.region_shortname)])))
 }
+
+output "api_gtw" {
+  value = format("${var.prefix}-gtw-%s", join("-", compact([lower(var.name),[lower(var.purpose), lower(var.environment), lower(var.region_shortname)])))
+}
