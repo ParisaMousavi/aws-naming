@@ -45,5 +45,5 @@ output "arc_dc_extension" {
 }
 
 output "api_gtw" {
-  value = format("${var.prefix}-gtw-%s", join("-", compact([lower(var.name),[lower(var.purpose), lower(var.environment), lower(var.region_shortname)])))
+  value = format("${var.prefix}-gtw-%s", join("-", compact([lower(var.name),lower(var.purpose), lower(var.environment), lower(var.region_shortname)])))
 }
