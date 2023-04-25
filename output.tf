@@ -30,6 +30,10 @@ output "policy" {
   value = format("${var.prefix}-plc-%s", join("-", compact([lower(var.name), var.purpose, lower(var.environment), lower(var.region_shortname)])))
 }
 
+output "role" {
+  value = format("${var.prefix}-rle-%s", join("-", compact([lower(var.name), var.purpose, lower(var.environment), lower(var.region_shortname)])))
+}
+
 output "arc" {
   value = format("${var.prefix}-arc-%s", join("-", compact([var.purpose, lower(var.name), lower(var.environment), lower(var.region_shortname)])))
 }
