@@ -62,5 +62,5 @@ output "security_group" {
 
 
 output "dynamodb" {
-  value = format("${var.prefix}-lmb-%s", join("-", compact([lower(var.name), var.purpose, lower(var.environment), lower(var.region_shortname)])))
+  value = format("${var.prefix}-dyn-%s", join("-", compact([lower(var.name), var.purpose, lower(var.environment), lower(var.region_shortname)])))
 }
