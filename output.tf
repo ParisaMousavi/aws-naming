@@ -59,3 +59,8 @@ output "lambda" {
 output "security_group" {
   value = format("${var.prefix}-sgr-%s", join("-", compact([lower(var.name), var.purpose, lower(var.environment), lower(var.region_shortname)])))
 }
+
+
+output "dynamodb" {
+  value = format("${var.prefix}-lmb-%s", join("-", compact([lower(var.name), var.purpose, lower(var.environment), lower(var.region_shortname)])))
+}
